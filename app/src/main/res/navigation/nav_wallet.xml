@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_wallet"
+            app:startDestination="@id/balancesFragment2">
+
+    <fragment android:id="@+id/balancesFragment2" android:name="com.bitcoin.tokenwallet.balances.BalancesFragment"
+              android:label="fragment_balances" tools:layout="@layout/fragment_balances">
+        <action android:id="@+id/action_balancesFragment2_to_settingsFragment2"
+                app:destination="@id/settingsFragment2"/>
+    </fragment>
+    <fragment android:id="@+id/backupFragment" android:name="com.bitcoin.tokenwallet.settings.BackupFragment"
+              android:label="settings_fragment" tools:layout="@layout/backup_fragment">
+        <action android:id="@+id/action_backupFragment_to_settingsFragment2" app:destination="@id/settingsFragment2"
+                app:popUpTo="@+id/settingsFragment2" app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment android:id="@+id/settingsFragment2" android:name="com.bitcoin.tokenwallet.settings.SettingsFragment"
+              android:label="settings_fragment" tools:layout="@layout/settings_fragment">
+        <action android:id="@+id/action_settingsFragment2_to_backupFragment" app:destination="@id/backupFragment"/>
+        <action android:id="@+id/action_settingsFragment2_to_balancesFragment22"
+                app:destination="@id/balancesFragment2" app:popUpTo="@+id/balancesFragment2"
+                app:popUpToInclusive="true"/>
+        <action android:id="@+id/action_settingsFragment2_to_restoreFragment" app:destination="@id/restoreFragment"/>
+    </fragment>
+    <fragment android:id="@+id/restoreFragment" android:name="com.bitcoin.tokenwallet.settings.RestoreFragment"
+              android:label="restore_fragment" tools:layout="@layout/restore_fragment">
+        <action android:id="@+id/action_restoreFragment_to_settingsFragment2" app:destination="@id/settingsFragment2"
+                app:popUpTo="@+id/settingsFragment2" app:popUpToInclusive="true"/>
+        <action android:id="@+id/action_restoreFragment_to_balancesFragment2" app:destination="@id/balancesFragment2"
+                app:popUpTo="@+id/balancesFragment2" app:popUpToInclusive="true"/>
+    </fragment>
+</navigation>

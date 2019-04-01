@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".receive.ReceiveFragment">
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/qrCard"
+
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/address"
+
+            android:layout_marginStart="32dp"
+
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintDimensionRatio="1:1" app:cardCornerRadius="@dimen/card_major_radius"
+            app:layout_constraintWidth_max="300dp"
+            app:layout_constraintHeight_max="300dp" android:maxHeight="300dp" android:maxWidth="300dp"
+            android:layout_marginTop="16dp">
+
+        <ImageView
+                android:src="@android:color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:id="@+id/qrImage"
+                android:contentDescription="@string/content_description_qr_code_receive_default"
+                android:scaleType="fitCenter"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp" android:id="@+id/qrLogo" android:scaleType="fitCenter"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+
+                    app:layout_constraintWidth_percent="0.2" app:layout_constraintHeight_percent="0.2"
+                    android:contentDescription="@string/content_slp_logo"
+                    tools:srcCompat="@drawable/logo_slp_white"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+    <TextView
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp" app:layout_constraintEnd_toEndOf="parent"
+            android:singleLine="true"
+            android:layout_marginEnd="16dp" android:ellipsize="middle"
+            android:scrollHorizontally="true" android:layout_marginBottom="8dp"
+            android:textAppearance="@style/MyAddressText" app:layout_constraintBottom_toTopOf="@+id/swapButton"/>
+    <ImageButton
+            android:src="@drawable/ic_baseline_swap_horiz_24px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/swapButton" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/copyButton"
+
+            android:background="@drawable/button_icon_on_background"
+            android:theme="@style/MyOnBackgroundButton"
+
+            android:contentDescription="@string/content_double_arrow_swap_icon" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent"/>
+    <Button
+            android:text="@string/copy_address"
+            style="?android:attr/borderlessButtonStyle"
+            android:theme="@style/MyOnBackgroundButton"
+            android:background="@drawable/button_on_background_ripple"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:id="@+id/copyButton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="16dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

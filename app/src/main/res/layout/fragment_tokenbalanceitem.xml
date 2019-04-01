@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:background="?android:selectableItemBackground"
+
+>
+
+    <com.luminiasoft.ethereum.blockiesandroid.BlockiesIdenticon
+            android:id="@+id/identicon"
+            android:layout_width="@dimen/token_list_blockie_size"
+            android:layout_height="@dimen/token_list_blockie_size"
+
+            android:layout_margin="@dimen/text_margin"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+            android:background="@drawable/blockie_background_ripple"
+
+            tools:srcCompat="@tools:sample/avatars[14]"
+
+            app:layout_constraintBottom_toBottomOf="parent">
+
+    </com.luminiasoft.ethereum.blockiesandroid.BlockiesIdenticon>
+
+
+    <ImageView
+            android:id="@+id/icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+
+            android:layout_margin="@dimen/text_margin"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            android:background="@drawable/blockie_background_ripple"
+
+             tools:srcCompat="@drawable/logo_bch"
+            />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mainBody"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="16dp"
+
+            app:layout_constraintStart_toEndOf="@+id/identicon"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+    >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/topRow"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/bottomRow"
+
+
+
+        >
+
+            <TextView
+                    android:id="@+id/name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+
+                    android:layout_marginEnd="@dimen/text_margin"
+
+                    android:scrollHorizontally="true"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textAppearance="?attr/textAppearanceListItem"
+                    style="@style/MyListItemTitle"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/fiatValue"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    tools:text="The UIOP"/>
+
+            <TextView
+                    android:id="@+id/fiatValue"
+                    android:text=""
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_margin="0dp"
+
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    android:textAppearance="?attr/textAppearanceListItem"
+                    style="@style/MyListItemTitle"
+                    tools:text="$123.45"
+            />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/bottomRow"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+            <TextView
+                    android:id="@+id/ticker"
+                    android:text=""
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginEnd="8dp"
+
+                    app:layout_constraintEnd_toStartOf="@id/amount"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+
+                    android:scrollHorizontally="true"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+
+                    android:textAppearance="?attr/textAppearanceListItem"
+                    style="@style/MyListItemSubtitle"
+                    tools:text="UIOP"
+            />
+            <TextView
+                    android:id="@+id/amount"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_margin="0dp"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    android:scrollHorizontally="true"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+
+                    android:textAppearance="?attr/textAppearanceListItem"
+                    style="@style/MyListItemSubtitle"
+                    tools:text="UIOP 123.45"
+                    />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

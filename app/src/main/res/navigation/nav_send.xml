@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_send"
+            app:startDestination="@id/sendFragment2">
+
+    <fragment android:id="@+id/sendFragment2" android:name="com.bitcoin.tokenwallet.send.SendFragment"
+              android:label="fragment_send" tools:layout="@layout/fragment_send">
+        <action android:id="@+id/action_sendFragment2_to_scanFragment2" app:destination="@id/scanFragment2"/>
+        <argument android:name="toAddress" app:argType="string" android:defaultValue=" " app:nullable="true"/>
+        <argument android:name="tokenId" app:argType="string" app:nullable="true" android:defaultValue=" "/>
+    </fragment>
+
+    <fragment android:id="@+id/scanFragment2" android:name="com.bitcoin.tokenwallet.send.ScanFragment"
+              android:label="scan_fragment" tools:layout="@layout/scan_fragment">
+        <action app:destination="@id/sendFragment2"
+                app:popUpTo="@+id/sendFragment2" app:popUpToInclusive="true"
+                android:id="@+id/action_scanFragment_to_sendFragment"/>
+    </fragment>
+</navigation>

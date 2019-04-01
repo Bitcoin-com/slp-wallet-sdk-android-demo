@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+>
+
+    <com.luminiasoft.ethereum.blockiesandroid.BlockiesIdenticon
+            android:id="@+id/blockie"
+            android:layout_width="@dimen/token_list_blockie_single_line_size"
+            android:layout_height="@dimen/token_list_blockie_single_line_size"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            tools:srcCompat="@tools:sample/avatars[14]"
+    >
+
+    </com.luminiasoft.ethereum.blockiesandroid.BlockiesIdenticon>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/blockie"
+
+
+            android:layout_marginStart="8dp">
+
+        <TextView
+                android:id="@+id/name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" tools:text="Name"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/balance"
+
+                android:layout_marginEnd="8dp"
+
+                android:scrollHorizontally="true"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textAppearance="?attr/textAppearanceListItem"
+                style="@style/MyListItemTitle"
+                app:layout_constraintHorizontal_bias="1.0"/>
+
+        <TextView
+                android:id="@+id/balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" tools:text="123.45"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+                android:scrollHorizontally="true"
+                android:ellipsize="end"
+                android:singleLine="true"
+
+                android:textAppearance="?attr/textAppearanceListItem"
+                style="@style/MyListItemSubtitle"
+                android:textAlignment="textEnd"
+                app:layout_constraintHorizontal_bias="1.0"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,139 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MyVersioned">
+        <!-- Customize your theme here. -->
+
+        <item name="colorPrimary">@color/mainBackground</item>
+
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- Toolbars are being used instead of ActionBars -->
+        <!--<item name="android:actionBarStyle">@style/AppTheme.ActionBar</item>-->
+        <!--<item name="android:titleTextStyle">@style/AppTheme.ActionBar.TitleTextStyle</item>
+        <item name="android:windowTitleStyle">@style/AppTheme.ActionBar.TitleTextStyle</item>-->
+
+        <item name="android:windowBackground">@color/mainBackground</item>
+    </style>
+
+
+    <style name="MyAddressText" parent="@style/TextAppearance.AppCompat.Medium">
+        <item name="android:fontFamily">@font/sf_pro_display_bold</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="MyDeemphasisedButton" parent="AppTheme">
+        <item name="android:fontFamily">@font/sf_pro_display</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:colorForeground">@android:color/black</item>
+        <!--<item name="colorControlHighlight">@color/indigo</item>-->
+        <item name="colorButtonNormal">@android:color/white</item>
+        <item name="colorControlHighlight">@android:color/darker_gray</item>
+
+    </style>
+
+    <style name="MyGradientButton" parent="AppTheme">
+        <item name="android:fontFamily">@font/sf_pro_display_bold</item>
+        <item name="android:textColor">@color/buttonText</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:colorForeground">@color/buttonText</item>
+        <!--<item name="colorControlHighlight">@color/indigo</item>-->
+        <item name="colorButtonNormal">@color/buttonInsideGradientTop </item>
+        <item name="colorControlHighlight">@color/buttonStrokeDark</item>
+    </style>
+
+    <style name="MyListItem" parent="AppTheme">
+        <item name="android:fontFamily">@font/sf_pro_text_bold</item>
+    </style>
+
+    <style name="MyListItemTitle" parent="AppTheme">
+        <item name="android:fontFamily">@font/sf_pro_text_bold</item>
+    </style>
+
+    <style name="MyListItemSubtitle" parent="AppTheme">
+        <item name="android:fontFamily">@font/sf_pro_text_regular</item>
+    </style>
+
+    <style name="MyBodyText">
+        <item name="android:fontFamily">@font/sf_pro_text_regular</item>
+        <item name="android:textColor">@color/onMainBackgroundText</item>
+    </style>
+
+    <style name="MyOnBackgroundButton" parent="AppTheme">
+        <item name="android:fontFamily">@font/sf_pro_display_bold</item>
+        <item name="android:textColor">@color/onMainBackgroundText</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:colorForeground">@color/onMainBackgroundText</item>
+        <!--<item name="colorButtonNormal">@android:color/white</item>-->
+        <item name="colorControlHighlight">@color/onMainBackgroundHighlight</item>
+        <item name="android:tint">@color/onMainBackgroundText</item>
+    </style>
+
+    <style name="BottomNavTextAppearance">
+        <item name="android:fontFamily">@font/sf_pro_text</item>
+    </style>
+
+    <style name="AppTheme.BottomNavigation" parent="AppTheme">
+        <item name="android:colorControlHighlight">@color/bottomNavActiveColor</item>
+    </style>
+
+    <style name="MyToolbarTextAppearance" parent="Base.TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:fontFamily">@font/sf_pro_text_bold</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.ActionBar">
+        <!-- This changes the color of the logo -->
+        <!--<item name="android:tint">@color/onMainBackgroundText</item>-->
+        <!--<item name="android:actionOverflowMenuStyle">@style/AppTheme.ActionMenu</item>-->
+        <item name="android:itemBackground">@drawable/menu_item_ripple</item>
+    </style>
+
+    <!-- In Progress -->
+
+    <!-- Widget.Material.Light.ProgressBar -->
+    <!--<style name="AppTheme.ProgressBarOnGradientButton" parent="Base.Widget.AppCompat.ProgressBar">
+        <item name="colorPrimary">@color/buttonText</item>
+    </style>-->
+
+    <!--<style name="TextAppearance.Widget.AppCompat.Toolbar.Title."-->
+    <!--<style name="Base.TextAppearance.Widget.AppCompat.Toolbar.Title."-->
+
+
+    <!--<style name="AppTheme.ActionBar">
+    <item name="android:titleTextStyle">@style/AppTheme.ActionBarStyle.TitleTextStyle</item>
+</style>-->
+
+    <!--<style name="AppTheme.ActionBarStyle.TitleTextStyle" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">#FF0000</item>
+        <item name="android:textColor">#FF0000</item>
+        <item name="android:fontFamily">@font/sf_pro_display</item>
+    </style>-->
+
+    <style name="MyActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="colorPrimary">#FF0000</item>
+        <item name="android:background">#FF0000</item>
+    </style>
+
+    <style name="AppTheme.ActionBar" parent="ThemeOverlay.AppCompat.ActionBar">
+
+        <!--<item name="colorPrimary">#0000FF</item>-->
+        <item name="android:actionMenuTextColor">#00FF00</item>
+        <item name="android:textColor">#FFFF00</item>
+        <item name="android:textColorPrimary">#FF0000</item>
+        <!--<item name="android:foreground">#FF0000</item>-->
+        <item name="android:colorForeground">#FF00FF</item>
+        <item name="android:colorControlNormal">#008888</item>
+    </style>
+
+
+
+
+    <!--<style name="AppTheme.ActionMenu" parent="Widget.AppCompat.Light.PopupMenu.Overflow">
+        <item name="android:colorBackground">@android:color/holo_purple</item>
+    </style>-->
+
+</resources>

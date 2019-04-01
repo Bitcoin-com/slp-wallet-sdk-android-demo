@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".settings.RestoreFragment">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    <TextView
+            android:text="@string/restore_instructions" android:id="@+id/instructions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="16dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            style="@style/MyBodyText"
+            android:textAlignment="center"/>
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:id="@+id/phrase" app:layout_constraintTop_toBottomOf="@+id/instructions"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+
+            android:background="@drawable/input_background"
+            android:hint="@string/mnemonic_phrase"/>
+
+    <TextView
+            android:id="@+id/warning"
+            android:text="@string/restore_warning"
+
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            style="@style/MyBodyText"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/phrase"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"
+
+
+            android:layout_marginTop="16dp"
+
+            android:textAlignment="center"/>
+    <Button
+            android:id="@+id/restoreButton"
+            android:text="@string/restore_wallet"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+
+            android:theme="@style/MyGradientButton"
+            android:background="@drawable/button_gradient_ripple"
+            android:layout_width="0dp"
+            android:layout_marginStart="16dp" android:layout_marginBottom="16dp" android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/warning"
+            app:layout_constraintVertical_bias="1.0"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

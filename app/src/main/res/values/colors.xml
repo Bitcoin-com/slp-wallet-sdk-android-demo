@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Green -->
+    <!--
+    <color name="colorPrimary">#008577</color>
+    <color name="buttonStrokeDark">#11A87E</color>
+    <color name="buttonStrokeIntermediate">#21B48B</color>
+    <color name="buttonInsideGradientBottom">#0AC18E</color>
+    <color name="main">#19CD9A</color>
+    <color name="buttonInsideGradientTop">#15D6A0</color>
+    -->
+
+    <!-- Blue -->
+    <color name="colorPrimary">#5575c8</color>
+    <color name="buttonStrokeDark">#5575c8</color>
+    <color name="buttonStrokeIntermediate">#5575c8</color>
+    <color name="buttonInsideGradientBottom">#5575c8</color>
+    <color name="main">#5575c8</color>
+    <color name="buttonInsideGradientTop">#5575c8</color>
+
+    <!-- For status bar with white icons -->
+    <color name="colorPrimaryDarker">#c7c7cc</color>
+
+
+    <color name="colorAccent">@color/colorPrimary</color>
+
+
+    <color name="colorLightGray">#D3D3D3</color>
+    <color name="colorLighterGray">#33353c43</color> <!-- 20% charcoalGrey -->
+
+
+    <color name="buttonText">#FFFFFF</color>
+
+    <color name="colorPrimaryDark">#ececee</color> <!-- paleLilac -->
+
+    <color name="bottomNavActiveColor">@color/buttonStrokeDark</color>
+    <color name="bottomNavInactiveColor">@android:color/darker_gray</color>
+
+    <color name="inputHighlight">@color/colorLighterGray</color>
+    <color name="inputStroke">@color/colorLightGray</color>
+
+    <color name="onMainBackgroundText">#e5353c43</color>  <!-- 90% charcoalGrey -->
+    <color name="onMainBackgroundHighlight">@color/colorLightGray</color>
+
+    <color name="mainBackground">#f9f9fb</color> <!-- paleGrey -->
+</resources>

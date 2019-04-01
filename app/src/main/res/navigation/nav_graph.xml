@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_graph"
+            app:startDestination="@id/balancesFragment">
+
+    <fragment android:id="@+id/balancesFragment" android:name="com.bitcoin.tokenwallet.balances.BalancesFragment"
+              android:label="@string/title_wallet" tools:layout="@layout/fragment_balances">
+        <action android:id="@+id/action_balancesFragment_to_settingsFragment" app:destination="@id/settingsFragment"/>
+        <action android:id="@+id/action_balancesFragment_to_receiveFragment" app:destination="@id/receiveFragment"
+                app:popUpToInclusive="true" app:popUpTo="@+id/receiveFragment" app:launchSingleTop="false"/>
+        <action android:id="@+id/action_balancesFragment_to_sendFragment" app:destination="@id/sendFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/receiveFragment" android:name="com.bitcoin.tokenwallet.receive.ReceiveFragment"
+              android:label="@string/title_receive" tools:layout="@layout/fragment_receive">
+        <action android:id="@+id/action_receiveFragment_to_sendFragment" app:destination="@id/sendFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/sendFragment" android:name="com.bitcoin.tokenwallet.send.SendFragment"
+              android:label="@string/title_send" tools:layout="@layout/fragment_send">
+        <action android:id="@+id/action_sendFragment_to_scanFragment" app:destination="@id/scanFragment"/>
+        <argument android:name="toAddress" app:argType="string" app:nullable="true" android:defaultValue=" "/>
+        <action android:id="@+id/action_sendFragment_to_receiveFragment" app:destination="@id/receiveFragment"/>
+        <action android:id="@+id/action_sendFragment_to_balancesFragment" app:destination="@id/balancesFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/settingsFragment" android:name="com.bitcoin.tokenwallet.settings.BackupFragment"
+              android:label="settings_fragment" tools:layout="@layout/backup_fragment"/>
+    <fragment android:id="@+id/scanFragment" android:name="com.bitcoin.tokenwallet.send.ScanFragment"
+              android:label="scan_fragment" tools:layout="@layout/scan_fragment">
+        <action android:id="@+id/action_scanFragment_to_sendFragment" app:destination="@id/sendFragment"
+                app:popUpTo="@+id/sendFragment" app:popUpToInclusive="true"/>
+    </fragment>
+</navigation>
